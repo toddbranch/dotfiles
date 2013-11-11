@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd ..
+ln -s .dotfiles/.vimrc .vimrc
+ln -s .dotfiles/.bashrc .bashrc
+ln -s .dotfiles/.Xdefaults .Xdefaults
+ln -s .dotfiles/.Xmodmap .Xmodmap
+ln -s .dotfiles/.xinitrc .xinitrc
+
+cd ~/.i3
+ln -s ~/.dotfiles/i3config config
+
+cd ~/.irssi
+ln -s ~/.dotfiles/irssiconfig config
