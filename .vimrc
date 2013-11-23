@@ -10,6 +10,9 @@ Bundle 'gmarik/vundle'
 "color schemes
 Bundle 'desert256.vim'
 
+"emmet - html and css
+Bundle "mattn/emmet-vim"
+
 "snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -49,6 +52,7 @@ syntax on                                           "set syntax highlighting
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set expandtab
 
 "visible whitespace
 set listchars=tab:>-,trail:~,extends:>,precedes:<
@@ -77,6 +81,7 @@ nmap <leader>l :setlocal number!<cr>
 nmap <leader>r :setlocal rnu!<cr>
 nmap <leader>p :set paste!<cr>
 nmap <leader>x :x<cr>
+nmap <leader>n :tabnew<cr>
 
 nmap <Left> <<
 nmap <Right> >>
@@ -86,6 +91,8 @@ nmap <CR> o<esc>
 
 imap <C-j> <esc>o
 imap <C-k> <esc>O
+
+nnoremap <silent> <leader>t :CommandT<CR>
 
 set cursorline
 
