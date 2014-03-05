@@ -1,11 +1,10 @@
 ignores = (
   {
     level = "JOINS PARTS QUITS MODES";
-    channels = ( "#archlinux", "#vim", "#linux" );
+    channels = ( "#archlinux", "#vim", "#linux",
+"#node.js"  );
     network = "freenode";
-  },
-  { level = "JOINS QUITS MODES"; channels = ( "#archlinux" ); },
-  { level = "JOINS PARTS QUITS MODES"; channels = ( "##linux" ); }
+  }
 );
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -117,6 +116,7 @@ channels = (
   { name = "linux"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "vim"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "archlinux"; chatnet = "freenode"; autojoin = "Yes"; }
+  { name = "node.js"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
