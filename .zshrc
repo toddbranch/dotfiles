@@ -47,7 +47,9 @@ plugins=(git archlinux)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/toddbranch/.gem/ruby/2.0.0/bin
+export PATH=$PATH:/usr/bin/core_perl:/home/toddbranch/.gem/ruby/2.0.0/bin
+
+alias git="hub"
 
 alias ..='cd ..'
 alias ..2='cd ..; cd ..'
@@ -66,15 +68,15 @@ alias "grep"="egrep"
 
 export DISPLAY=:0
 
+trackpadId=`xinput --list | grep GlidePoint | grep -o "id=[0-9]+"| grep -o "[0-9]+"`
+
 function enMouse() {
-    xinput set-int-prop 10 "Device Enabled" 8 1
+    xinput set-int-prop $trackpadId "Device Enabled" 8 1
 }
 
 function disMouse() {
-    xinput set-int-prop 10 "Device Enabled" 8 0
+    xinput set-int-prop $trackpadId "Device Enabled" 8 0
 }
-
-disMouse
 
 function homeDisplay() {
     xrandr --output LVDS1 --auto
@@ -94,9 +96,14 @@ msp430_assembly()
 alias "notes"="cd ~/courses/site/ECE382/notes"
 alias "labs"="cd ~/courses/site/ECE382/labs"
 alias "ECE382"="cd ~/courses/site/ECE382"
+alias "ECE383"="cd ~/courses/site/ECE383"
 alias "datasheets"="cd ~/courses/site/ECE382/datasheets"
-alias "syncECE382"="rsync -r ~/courses root@oceanWeddingHost:"
-alias "build"="blah=$(pwd); cd ~/courses; node build.js; cd $blah"
+alias "syncCourses"="rsync -r ~/courses root@oceanWeddingHost:"
+
+alias "build2"="cd ~/courses/; node build.js ./site/ECE382 ./site/ECE382/template.ejs ECE382"
+alias "build3"="cd ~/courses/; node build.js ./site/ECE383 ./site/ECE383/template.ejs ECE383"
+alias "build4"=""
+alias "buildS"="cd ~/courses/; node build.js ./site/SummerSeminar ./site/SummerSeminar/template.ejs SummerSeminar"
 
 export HISTCONTROL=ignorespace
 
@@ -123,3 +130,12 @@ function clone-fork()
 {
     git clone https://github.com/toddbranch/$@
 }
+
+function px() {
+  chmod u+rx $1
+}
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
+alias "d"="sdcv"

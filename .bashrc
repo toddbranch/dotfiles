@@ -74,6 +74,10 @@ alias "notes"="cd ~/courses/site/ECE382/notes"
 alias "labs"="cd ~/courses/site/ECE382/labs"
 alias "ECE382"="cd ~/courses/site/ECE382"
 alias "syncECE382"="rsync -r ~/courses root@oceanWeddingHost:"
-alias "build"="blah=$(pwd); cd ~/courses; node build.js; cd $blah"
+
+alias "build2"="cd ~/courses/; node build.js ./site/ECE382 ./site/ECE382/template.ejs ECE382"
+alias "build3"="cd ~/courses/; node build.js ./site/ECE383 ./site/ECE383/template.ejs ECE383"
+alias "build4"=""
+alias "buildS"="cd ~/courses/; node build.js ./site/SummerSeminar ./site/SummerSeminar/template.ejs SummerSeminar"
 
 export HISTCONTROL=ignorespace
