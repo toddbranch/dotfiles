@@ -101,4 +101,6 @@ set cursorline
 
 set path+=/usr/msp430/include/
 
-set tw=79
+set tw=0
+set wrap
+set wrapmargin=79
