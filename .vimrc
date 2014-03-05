@@ -40,6 +40,9 @@ Bundle "nathanaelkane/vim-indent-guides"
 " completion
 " Bundle Valloric/YouCompleteMe -- need to recompile for this
 
+" haskell
+Bundle "dag/vim2hs"
+
 "All of my bundles
 
 filetype plugin indent on
@@ -97,3 +100,5 @@ nnoremap <silent> <leader>t :CommandT<CR>
 set cursorline
 
 set path+=/usr/msp430/include/
+
+set tw=79
