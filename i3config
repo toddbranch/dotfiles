@@ -24,7 +24,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec ~/.i3/scripts/openShellInCurrentWorkingDirectory.sh
+# bindsym $mod+Return exec ~/.i3/scripts/openShellInCurrentWorkingDirectory.sh
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -145,5 +146,4 @@ bar {
         status_command i3status
 }
 
-workspace 1 output LVDS1
-workspace 2 output VGA1
+exec --no-startup-id i3-msg 'workspace1; exec /usr/bin/urxvt; workspace2; exec /usr/bin/chromium;'

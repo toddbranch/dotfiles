@@ -2,48 +2,57 @@ set nocompatible                                    "be IMproved
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "color schemes
-Bundle 'desert256.vim'
+Plugin 'desert256.vim'
 
 "emmet - html and css
-Bundle "mattn/emmet-vim"
+Plugin 'mattn/emmet-vim'
 
 "snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
-Bundle "garbas/vim-snipmate"
-Bundle "mhinz/vim-startify"
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+" Plugin 'scrooloose/snipmate-snippets'
+Plugin 'honza/vim-snippets'
+Plugin 'mhinz/vim-startify'
 
 "vim-fugitive - git integratin
-Bundle "tpope/vim-fugitive"
+Plugin 'tpope/vim-fugitive'
 
 "command-t file completion
-Bundle "wincent/Command-T"
+Plugin 'wincent/Command-T'
 
 "markdown syntax highlighting
-Bundle "plasticboy/vim-markdown"
+Plugin 'plasticboy/vim-markdown'
 
 "vim hard mode
-Bundle "wikitopian/hardmode"
+Plugin 'wikitopian/hardmode'
 
 "javascript stuff
-Bundle "jelera/vim-javascript-syntax"
-Bundle "pangloss/vim-javascript"
-Bundle "nathanaelkane/vim-indent-guides"
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " completion
-" Bundle Valloric/YouCompleteMe -- need to recompile for this
+" Plugin Valloric/YouCompleteMe -- need to recompile for this
 
 " haskell
-Bundle "dag/vim2hs"
+Plugin 'dag/vim2hs'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+
+" unimpaired
+Plugin 'tpope/vim-unimpaired'
 
 "All of my bundles
+
+call vundle#end()
 
 filetype plugin indent on
 
@@ -101,6 +110,5 @@ set cursorline
 
 set path+=/usr/msp430/include/
 
-set tw=0
-set wrap
-set wrapmargin=79
+scriptencoding utf-8
+set encoding=utf-8

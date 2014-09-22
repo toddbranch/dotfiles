@@ -1,10 +1,8 @@
 ! terminal colors ------------------------------------------------------------
 
 ! tangoesque scheme
- *background: #111111
- *foreground: #babdb6
-! *background: #ffffff
-! *foreground: #111111
+*background: #111111
+*foreground: #babdb6
 ! Black (not tango) + DarkGrey
 *color0:  #000000
 *color8:  #555753
@@ -18,7 +16,7 @@
 *color3:  #eab93d
 *color11: #ffc123
 ! DarkBlue + Blue
-*color4:  #204a87
+*color4:  #134a87
 *color12: #3465a4
 ! DarkMagenta + Magenta
 *color5:  #ce5c00
@@ -30,11 +28,15 @@
 *color7:  #cccccc
 *color15: #ffffff
 
-*scrollBar:    false
+urxvt*scrollBar: false
 
-URxvt.perl-ext:      default,url-select
-URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.url-select.launcher:   /usr/bin/luakit
-URxvt.url-select.underline: true
-
-URxvt.colorUL:          #3465a4
+Xft.antialias:    rgba
+Xft.dpi:    96
+Xft.rgba:    rgb
+Xft.hinting:    true
+Xft.hintstyle:    hintslight
+URxvt.xftAntialias: true
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true, xft:inconsolata:pixelsize=13:antialias=true:hinting=true 
+URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true, xft:inconsolata:pixelsize=13:antialias=true:hinting=true 
+URxvt.italicFont: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true, xft:inconsolata:pixelsize=13:antialias=true:hinting=true 
+URxvt.bolditalicFont: xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true, xft:inconsolata:pixelsize=13:antialias=true:hinting=true

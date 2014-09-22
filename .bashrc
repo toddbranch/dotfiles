@@ -43,17 +43,15 @@ set -o vi
 alias "E"="exit"
 alias "grep"="egrep"
 
-export DISPLAY=:0
-
 function enMouse() {
-    xinput set-int-prop 10 "Device Enabled" 8 1
+    xinput set-int-prop 11 "Device Enabled" 8 1
 }
 
 function disMouse() {
-    xinput set-int-prop 10 "Device Enabled" 8 0
+    xinput set-int-prop 11 "Device Enabled" 8 0
 }
 
-disMouse
+# disMouse
 
 function homeDisplay() {
     xrandr --output LVDS1 --auto
@@ -81,3 +79,12 @@ alias "build4"=""
 alias "buildS"="cd ~/courses/; node build.js ./site/SummerSeminar ./site/SummerSeminar/template.ejs SummerSeminar"
 
 export HISTCONTROL=ignorespace
+
+alias "c"="chromium"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
+
+alias zf=/home/toddbranch/ZendFramework-1.12.3/bin/zf.sh

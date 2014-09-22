@@ -139,3 +139,8 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 alias "d"="sdcv"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
