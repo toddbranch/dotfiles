@@ -2,7 +2,7 @@ ignores = (
   {
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#archlinux", "#vim", "#linux",
-"#node.js"  );
+"#node.js", "#zftalk", "#php"  );
     network = "freenode";
   }
 );
@@ -117,6 +117,8 @@ channels = (
   { name = "vim"; chatnet = "freenode"; autojoin = "Yes"; },
   { name = "archlinux"; chatnet = "freenode"; autojoin = "Yes"; }
   { name = "node.js"; chatnet = "freenode"; autojoin = "Yes"; }
+  { name = "zftalk"; chatnet = "freenode"; autojoin = "Yes"; }
+  { name = "php"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {

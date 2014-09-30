@@ -25,7 +25,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-fugitive'
 
 "command-t file completion
-Plugin 'wincent/Command-T'
+"Plugin 'wincent/Command-T'
 
 "markdown syntax highlighting
 Plugin 'plasticboy/vim-markdown'
@@ -39,7 +39,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 " completion
-" Plugin Valloric/YouCompleteMe -- need to recompile for this
+Plugin 'Valloric/YouCompleteMe'
 
 " haskell
 Plugin 'dag/vim2hs'
@@ -49,6 +49,11 @@ Plugin 'scrooloose/nerdtree'
 
 " unimpaired
 Plugin 'tpope/vim-unimpaired'
+
+" syntastic
+Plugin 'scrooloose/syntastic'
+
+Plugin 'kien/ctrlp.vim'
 
 "All of my bundles
 
@@ -88,12 +93,11 @@ if has("autocmd")
 endif
 
 "normal mode shortcuts
-nmap <leader>v :tabedit $MYVIMRC<cr>
-nmap <leader>l :setlocal number!<cr>
-nmap <leader>r :setlocal rnu!<cr>
-nmap <leader>p :set paste!<cr>
-nmap <leader>x :x<cr>
-nmap <leader>n :tabnew<cr>
+nmap <leader>v :e $MYVIMRC<cr>
+nmap <leader>n :bn<cr>
+nmap <leader>p :bp<cr>
+nmap <leader>b :ls<cr>
+
 
 nmap <Left> <<
 nmap <Right> >>
@@ -112,3 +116,13 @@ set path+=/usr/msp430/include/
 
 scriptencoding utf-8
 set encoding=utf-8
+
+"autocmd VimEnter * Explore
+
+set hidden
+
+let g:CommandTMaxFiles=50000
+
+set noautochdir
+
+let g:netrw_liststyle=3

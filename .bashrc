@@ -44,11 +44,11 @@ alias "E"="exit"
 alias "grep"="egrep"
 
 function enMouse() {
-    xinput set-int-prop 11 "Device Enabled" 8 1
+    xinput set-int-prop 12 "Device Enabled" 8 1
 }
 
 function disMouse() {
-    xinput set-int-prop 11 "Device Enabled" 8 0
+    xinput set-int-prop 12 "Device Enabled" 8 0
 }
 
 # disMouse
@@ -59,8 +59,8 @@ function homeDisplay() {
 }
 
 function workDisplay() {
-    xrandr --output LVDS1 --auto
-    xrandr --output VGA1 --auto --right-of LVDS1
+    xrandr --output eDP1 --auto
+    xrandr --output HDMI2 --auto --right-of eDP1
 }
 
 msp430_assembly()
@@ -87,4 +87,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
-alias zf=/home/toddbranch/ZendFramework-1.12.3/bin/zf.sh
+alias zf=/home/toddbranch/lib/ZendFramework-1.12.9/bin/zf.sh
+
+export EDITOR=vim
+
+alias serve="python -m http.server"

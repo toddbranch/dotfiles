@@ -146,4 +146,21 @@ bar {
         status_command i3status
 }
 
-exec --no-startup-id i3-msg 'workspace1; exec /usr/bin/urxvt; workspace2; exec /usr/bin/chromium;'
+# http://i3wm.org/docs/user-contributed/lzap-config.html
+
+workspace 1 output HDMI2
+workspace 2 output HDMI2
+workspace 3 output HDMI2
+workspace 4 output HDMI2
+workspace 5 output eDP1
+workspace 6 output eDP1
+workspace 7 output eDP1
+workspace 8 output eDP1
+workspace 9 output eDP1
+
+#####################################################################################
+
+exec /home/toddbranch/.i3/scripts/display.sh
+
+exec chromium
+exec hipchat

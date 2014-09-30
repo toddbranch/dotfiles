@@ -1,10 +1,13 @@
 #!/bin/bash
 
 xrdb ~/.Xresources
+setxkbmap -option caps:escape
 xmodmap ~/.Xmodmap
 
-
 exec i3
+
+xrandr --output eDP1 --auto
+xrandr --output HDMI2 --auto --right-of eDP1
 
 # export DISPLAY=:0
 # 
@@ -13,3 +16,4 @@ exec i3
 
 # autocutsel -fork &
 # # autocutsel -selection PRIMARY -fork &
+
