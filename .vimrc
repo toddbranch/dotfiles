@@ -20,9 +20,9 @@ Plugin 'garbas/vim-snipmate'
 " Plugin 'scrooloose/snipmate-snippets'
 Plugin 'honza/vim-snippets'
 Plugin 'mhinz/vim-startify'
-
+"
 "vim-fugitive - git integratin
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 "command-t file completion
 "Plugin 'wincent/Command-T'
@@ -42,7 +42,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Valloric/YouCompleteMe'
 
 " haskell
-Plugin 'dag/vim2hs'
+"Plugin 'dag/vim2hs'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
@@ -81,7 +81,8 @@ nmap <SPACE> za
 set foldlevel=99
 
 "relative numbering
-set rnu
+"set rnu
+set nu " this vim doesn't support RNU
 
 "Makefile-specific configs
 autocmd Filetype make setlocal noexpandtab
@@ -111,8 +112,6 @@ imap <C-k> <esc>O
 nnoremap <silent> <leader>t :CommandT<CR>
 
 set cursorline
-
-set path+=/usr/msp430/include/
 
 scriptencoding utf-8
 set encoding=utf-8
