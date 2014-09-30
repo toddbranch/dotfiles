@@ -33,6 +33,8 @@ function cl()
     cd "$@" && la;
 }
 
+alias cd="cl"
+
 function so()
 {
     source ~/.bashrc;
@@ -63,21 +65,6 @@ function workDisplay() {
     xrandr --output VGA1 --auto --right-of LVDS1
 }
 
-msp430_assembly()
-{
-    git clone ~/msp430-assembly-project/ ./$1
-}
-
-alias "notes"="cd ~/courses/site/ECE382/notes"
-alias "labs"="cd ~/courses/site/ECE382/labs"
-alias "ECE382"="cd ~/courses/site/ECE382"
-alias "syncECE382"="rsync -r ~/courses root@oceanWeddingHost:"
-
-alias "build2"="cd ~/courses/; node build.js ./site/ECE382 ./site/ECE382/template.ejs ECE382"
-alias "build3"="cd ~/courses/; node build.js ./site/ECE383 ./site/ECE383/template.ejs ECE383"
-alias "build4"=""
-alias "buildS"="cd ~/courses/; node build.js ./site/SummerSeminar ./site/SummerSeminar/template.ejs SummerSeminar"
-
 export HISTCONTROL=ignorespace
 
 alias "c"="chromium"
@@ -88,3 +75,11 @@ export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
 
 alias zf=/home/toddbranch/ZendFramework-1.12.3/bin/zf.sh
+
+export DEV_ENV=tbranchflower
+export PARENT_DIR=/www/dev-env/tbranchflower/www
+
+export TERM=linux
+
+alias "dev"="cd /www/dev-env/tbranchflower/www/virtual/"
+alias "mw"="cd /www/dev-env/tbranchflower/www/virtual/mywedding/current"
