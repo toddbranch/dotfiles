@@ -7,55 +7,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-"color schemes
 Plugin 'desert256.vim'
-
-"emmet - html and css
-Plugin 'mattn/emmet-vim'
-
-"snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-" Plugin 'scrooloose/snipmate-snippets'
-Plugin 'honza/vim-snippets'
-Plugin 'mhinz/vim-startify'
-"
-"vim-fugitive - git integratin
-"Plugin 'tpope/vim-fugitive'
-
-"command-t file completion
-"Plugin 'wincent/Command-T'
-
-"markdown syntax highlighting
-Plugin 'plasticboy/vim-markdown'
-
-"vim hard mode
-Plugin 'wikitopian/hardmode'
-
-"javascript stuff
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
-
-" completion
-Plugin 'Valloric/YouCompleteMe'
-
-" haskell
-"Plugin 'dag/vim2hs'
-
-" NERDTree
-Plugin 'scrooloose/nerdtree'
-
-" unimpaired
-Plugin 'tpope/vim-unimpaired'
-
-" syntastic
-Plugin 'scrooloose/syntastic'
-
 Plugin 'kien/ctrlp.vim'
-
-"All of my bundles
 
 call vundle#end()
 
@@ -72,8 +25,8 @@ set softtabstop=2
 set expandtab
 
 "visible whitespace
-set listchars=tab:>-,trail:~,extends:>,precedes:<
-set nolist
+"set listchars=tab:>-,trail:~,extends:>,precedes:<
+"set nolist
 
 "fold settings
 set nofoldenable
@@ -94,10 +47,14 @@ if has("autocmd")
 endif
 
 "normal mode shortcuts
+
+let mapleader=";"
+
 nmap <leader>v :e $MYVIMRC<cr>
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>b :ls<cr>
+nmap <leader>e :Explore<cr>
 
 
 nmap <Left> <<
@@ -116,12 +73,10 @@ set cursorline
 scriptencoding utf-8
 set encoding=utf-8
 
-"autocmd VimEnter * Explore
-
-set hidden
-
-let g:CommandTMaxFiles=50000
-
-set noautochdir
+autocmd VimEnter * Explore
 
 let g:netrw_liststyle=3
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
+let g:ctrlp_max_files=0
