@@ -1,18 +1,41 @@
-set nocompatible                                    "be IMproved
+" NeoBundle Scripts-----------------------------
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
-filetype off
+  "Required
+  set runtimepath+=/home/toddbranch/.vim/bundle/neobundle.vim/
+endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"Required
+call neobundle#begin(expand('/home/toddbranch/.vim/bundle'))
 
-Plugin 'gmarik/Vundle.vim'
+" Let NeoBundle manage NeoBundle
+"Required
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Plugin 'desert256.vim'
-Plugin 'kien/ctrlp.vim'
+" Add or remove your Bundles here:
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'desert256.vim'
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
+NeoBundle 'wincent/command-t'
 
-call vundle#end()
+" You can specify revision/branch/tag.
+"NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
+"Required
+call neobundle#end()
+
+"Required
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
 
 colorscheme desert256
 "colorscheme default
@@ -37,10 +60,6 @@ set foldlevel=99
 "set rnu
 set nu " this vim doesn't support RNU
 
-"Makefile-specific configs
-autocmd Filetype make setlocal noexpandtab
-autocmd Filetype make setlocal nolist
-
 "auto-source vimrc on save
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
@@ -50,11 +69,13 @@ endif
 
 let mapleader=";"
 
-nmap <leader>v :e $MYVIMRC<cr>
+nmap <leader>r :e $MYVIMRC<cr>
 nmap <leader>n :bn<cr>
 nmap <leader>p :bp<cr>
 nmap <leader>b :ls<cr>
 nmap <leader>e :Explore<cr>
+nmap <leader>v :vs<cr>
+nmap <leader>s :sp<cr>
 
 
 nmap <Left> <<
@@ -73,10 +94,10 @@ set cursorline
 scriptencoding utf-8
 set encoding=utf-8
 
-autocmd VimEnter * Explore
-
 let g:netrw_liststyle=3
 
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+let g:CommandTMaxFiles=100000
 
 let g:ctrlp_max_files=0
+
+set wildignore+=*.swp,*/.git,*/node_modules
