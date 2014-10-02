@@ -3,11 +3,11 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   "Required
-  set runtimepath+=/home/toddbranch/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 "Required
-call neobundle#begin(expand('/home/toddbranch/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 "Required
@@ -35,10 +35,10 @@ colorscheme desert256
 "colorscheme default
 syntax on                                           "set syntax highlighting
 
-"set tabs to 2 spaces, do not expand
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+"set tabs to 4 spaces, do not expand
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 "visible whitespace
