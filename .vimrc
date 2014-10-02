@@ -15,13 +15,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'desert256.vim'
-NeoBundle 'L9'
-NeoBundle 'FuzzyFinder'
-NeoBundle 'wincent/command-t'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -71,11 +65,12 @@ let mapleader=";"
 
 nmap <leader>r :e $MYVIMRC<cr>
 nmap <leader>n :bn<cr>
-nmap <leader>p :bp<cr>
-nmap <leader>b :ls<cr>
+nmap <leader>p <c-p>
+nmap <leader>b :CtrlPBuffer<cr>
 nmap <leader>e :Explore<cr>
 nmap <leader>v :vs<cr>
 nmap <leader>s :sp<cr>
+nmap <leader>d :bd<cr>
 
 
 nmap <Left> <<
@@ -87,17 +82,13 @@ nmap <CR> o<esc>
 imap <C-j> <esc>o
 imap <C-k> <esc>O
 
-nnoremap <silent> <leader>t :CommandT<CR>
-
 set cursorline
 
 scriptencoding utf-8
 set encoding=utf-8
 
-let g:netrw_liststyle=3
-
-let g:CommandTMaxFiles=100000
-
 let g:ctrlp_max_files=0
 
 set wildignore+=*.swp,*/.git,*/node_modules
+
+set hidden
