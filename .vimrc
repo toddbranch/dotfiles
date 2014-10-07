@@ -16,6 +16,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Add or remove your Bundles here:
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'desert256.vim'
+NeoBundle 'ervandew/supertab'
+"NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'scrooloose/syntastic'
 
 " You can specify revision/branch/tag.
 "NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -49,10 +52,6 @@ set expandtab
 set nofoldenable
 nmap <SPACE> za
 set foldlevel=99
-
-"relative numbering
-"set rnu
-set nu " this vim doesn't support RNU
 
 "auto-source vimrc on save
 if has("autocmd")
@@ -92,3 +91,5 @@ let g:ctrlp_max_files=0
 set wildignore+=*.swp,*/.git,*/node_modules
 
 set hidden
+
+set laststatus=2
